@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer resouce hub</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <h2> Devhub</h2>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#resources">Resources</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#about">About</a>
+        </div>
+
+         <a href="#roadmap">
+        <button>Explore</button>
+        <button onclick="toggleDarkMode()">Dark Mode</button>
+    </a>
+
+    </nav>
+
+    <section id="resources" class="resources">
+  <h1>Find the best Resouces for your Developer journey!</h1>
+
+  <p>
+    Explore free tutorial ,docs,tools,and guides to enhance your skills and build a amazing projects.
+  </p>
+
+  <input type="text" id="searchBox"   placeholder="search resources...">
+    </section>
+
+    <main>
+        <aside class="sidebar">
+    <h2>Categories</h2>
+
+    <!-- Filter Buttons (For Instant Card Filtering) -->
+    <button class="category-filter active" data-category="All">All Resources</button>
+    <button class="category-filter" data-category="HTML">HTML</button>
+    <button class="category-filter" data-category="CSS">CSS</button>
+    <button class="category-filter" data-category="JavaScript">JavaScript</button>
+    <button class="category-filter" data-category="Python">Python</button>
+    <button class="category-filter" data-category="DSA">DSA</button>
+    <button class="category-filter" data-category="Tools">Tools</button>
+
+    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ccc;">
+
+    <!-- Quick Reference Docs Dropdown -->
+    <h3>Official Docs</h3>
+    <details>
+        <summary>HTML & CSS Docs</summary>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML</a></p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN CSS</a></p>
+    </details>
+
+    <details>
+        <summary>JavaScript Docs</summary>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN JavaScript</a></p>
+    </details>
+
+    <details>
+        <summary>DSA & Languages</summary>
+        <p><a href="https://docs.python.org/3/tutorial/" target="_blank">Python Docs</a></p>
+        <p><a href="https://www.geeksforgeeks.org/data-structures/" target="_blank">GeeksforGeeks DSA</a></p>
+    </details>
+</aside>
+
+        <section id="resources" class="resource-list">
+            <h2>Popular Resouces</h2>
+
+                <!----card 1---->
+         <div class="resource-container">
+            <article class="resource-card" data-category="HTML" >
+                <h3>HTML BASICS</h3>
+
+                <p>Learn the fundamentals of html and create structured web Pages.</p>
+
+                <span>HTML</span>
+
+                <span>Begginer</span>
+
+                <a href="https://www.w3schools.com/html/" target="_blank">View Resources</a>
+
+            </article>
+                     
+                    <!----card 2---->
+          
+
+            <article class="resource-card"  data-category="CSS">
+
+                <h3>CSS guide</h3>
+
+                <p>Learn how to style websites and create beautiful layouts.</p>
+
+                <span>CSS</span>
+
+                <span>Begginer</span>
+
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">View Resources</a>
+
+            </article>
+
+               <!----card 3---->
+
+            <article class="resource-card" data-category="JavaScript">
+                <h3>javascript Basics</h3>
+
+                <p>Learn the Basics of javascript and add intercreaivity to websites.</p>
+
+                <span>javascript</span>
+
+                <span>Begginer</span>
+
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">View Resources</a>
+
+            </article>
+
+            <!----card 4---->
+            <article class="resource-card"  data-category="DSA">
+                <h3>C++ DSA</h3>
+
+                <p>Learn data structure and algorithms using C++.</p>
+
+                <span>C++</span>
+
+                <span>Intermediate</span>
+
+                <a href="https://www.geeksforgeeks.org/cpp/" target="_blank" >View Resources</a>
+
+            </article>
+                    <!----card 5---->
+            <article class="resource-card" data-category="Tools" >
+                <h3>Python</h3>
+
+                <p>Python is a versatile, high-level programming language known for its simple and readable syntax.</p>
+
+                <span>Python</span>
+
+                <span>Begginer</span>
+
+                <a href="https://www.python.org/" target="_blank">View Resources</a>
+            </article>
+
+
+           <!----card 6---->
+            <article class="resource-card" data-category="Tools" >
+                <h3>Github</h3>
+
+                <p>Learn version controls and manage your projects online.</p>
+
+                <span>Github</span>
+
+                <span>Advanced</span>
+
+                <a href="https://github.com/" target="_blank">View Resources</a>
+            </article>
+
+      </div>
+
+        </section>
+
+        <section id="add-resource" class="add-resource">
+    <h2>Add a New Resource</h2>
+    <p>Share useful learning resources with other developers.</p>
+
+    <form id="resourceForm">
+        <label for="resourceTitle">Resource Title</label>
+        <input type="text" id="resourceTitle"
+               placeholder="Enter resource title" required>
+
+        <label for="resourceCategory">Category</label>
+        <select id="resourceCategory" required>
+            <option value="">Select Category</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+            <option value="DSA">DSA</option>
+            <option value="Tools">Tools</option>
+        </select>
+
+        <label for="resourceDescription">Description</label>
+        <textarea id="resourceDescription"
+                  placeholder="Enter description" required></textarea>
+
+        <label for="resourceURL">Resource URL</label>
+        <input type="url" id="resourceURL"
+               placeholder="https://example.com" required>
+
+        <button type="submit">Add Resource</button>
+    </form>
+
+    <p id="formMessage" role="status"></p>
+</section>
+
+       <section id="roadmap" class="roadmap">
+
+    <h2>Learning Roadmap</h2>
+
+    <div class="roadmap-container">
+
+        <div class="roadmap-item">
+            <div class="roadmap-number">1</div>
+            <h3>HTML</h3>
+            <p>Learn the structure of web pages.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+                Learn
+            </a>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="roadmap-item">
+            <div class="roadmap-number">2</div>
+            <h3>CSS</h3>
+            <p>Learn styling and website layouts.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                Learn
+            </a>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="roadmap-item">
+            <div class="roadmap-number">3</div>
+            <h3>JavaScript</h3>
+            <p>Add interactivity to websites.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">
+                Learn
+            </a>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="roadmap-item">
+            <div class="roadmap-number">4</div>
+            <h3>Git & GitHub</h3>
+            <p>Learn version control and manage projects.</p>
+            <a href="https://github.com/" target="_blank">
+                Explore
+            </a>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="roadmap-item">
+            <div class="roadmap-number">5</div>
+            <h3>Responsive Design</h3>
+            <p>Make websites work on different devices.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design" target="_blank">
+                Learn
+            </a>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="roadmap-item">
+            <div class="roadmap-number">6</div>
+            <h3>Projects</h3>
+            <p>Build projects and practice your skills.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website" target="_blank">
+                Start
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+       
+         
+
+
+        
+
+
+        
+
+      <section id="media" class="media-section">
+
+        <h2>Learning media</h2>
+
+        <p>
+            Learn through useful videos and other media resources.
+        </p>
+
+        <div class="media-card">
+            <h3>Developer Resources</h3>
+
+            <p>Watch tutorials and learn new developments concepts</p>
+
+            <a href="https://www.youtube.com/" target="_blank">Watch now</a>
+        </div>
+
+        </div>
+
+        
+
+      </section>
+
+       <aside class="quick-links"> 
+    <h2>Quick links</h2>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+        HTML Documentation
+    </a>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+        CSS Documentation
+    </a>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+        JavaScript Documentation
+    </a>
+
+    <a href="https://github.com/" target="_blank">
+        GitHub
+    </a>
+</aside>
+
+        <section id="about">
+    <h2>About Developer Hub</h2>
+
+    <p>
+        Developer Hub is a simple resource website for developers
+        to learn, practice and improve their technical skills.
+    </p>
+</section>
+
+
+
+      
+    </main>
+
+    <footer>
+        
+        <div class="footer-content">
+
+            <div class="footer-about">
+
+                <h2>Developer hub</h2>
+                <p>A simple Resouce hub for developers to learn,practice and grow</p>
+
+
+            </div>
+        </div>
+
+        <div class="footer-link">
+            <h3>Quick links</h3>
+
+            <a href="#home">Home</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#resources">Resources</a>
+            <a href="#media">Media</a>
+            <a href="#about">About</a>
+        </div>
+
+        <div class="footer-contact"> 
+            <h3>Contact</h3>
+
+            <p>Email: developerhub@acropolis.in</p>
+            <p>Indore,madhyapradesh</p>
+
+        </div>
+
+        <div class="copyright">
+            <p>@2026 developer resource hub.All right Reserved.</p>
+        </div>
+
+    </footer>
+
+      <script src="script.js"></script>
+
+</body>
+</html>
