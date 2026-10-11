@@ -492,7 +492,7 @@ body.dark-theme * {
 }
 
 /* Mobile Responsive */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;
         gap: 15px;
@@ -525,4 +525,20 @@ body.dark-theme * {
     #add-resource {
         width: 100%;
     }
+body, container, footer {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+ .resource-card, .card {
+    width: 100% 
+    max-width: 100%;
+   margin: 10px 0;
+    box-sizing: border-box;
+  }
+  .resource-container, .card-grid {
+    grid-template-columns: 1fr 
+    gap: 15px;
+  }
+
 }
