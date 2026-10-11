@@ -490,6 +490,15 @@ body.dark-theme * {
         display: none;
     }
 }
+body,.container, footer ,section{
+    width: 100%;
+     max-width: 100%;
+     margin-left: auto;
+     margin-right: auto;
+     box-sizing: border-box;
+     text-align: center;
+   
+  }
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
@@ -525,12 +534,11 @@ body.dark-theme * {
     #add-resource {
         width: 100%;
     }
-body, container, footer {
-    width: 100%;
-    padding: 15px;
-    box-sizing: border-box;
-  }
- .resource-card, .card {
+.body{
+    padding: 10px;
+    overflow-x: hidden;
+}
+ .resource-card, .card ,.box{
     width: 100% 
     max-width: 100%;
    margin: 10px 0;
