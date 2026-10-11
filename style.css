@@ -538,7 +538,7 @@ body,.container, footer ,section{
     padding: 10px;
     overflow-x: hidden;
 }
- .resource-card, .card ,.box{
+ .resource-card, .card ,.box,.roadmap-container{
     width: 100% 
     max-width: 100%;
    margin: 10px 0;
